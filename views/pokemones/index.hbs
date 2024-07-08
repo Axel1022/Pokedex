@@ -1,0 +1,57 @@
+{{#if hasPokemon}}
+  <div class="m-3">
+
+    <h1 class="text-center">Administrador - Pokemones</h1>
+    <a href="/modPokemones" class="btn btn-success m-1">+ Nuevo pokemon</a>
+    {{! Hay que cambiar esto too, xd }}
+    <div class="row">
+      {{#each Pokemones}}
+        <div class="col-12 col-sm-3 mt-3 p-3">
+          <div
+            class="card shadow"
+            style="border-top-left-radius: 10px; border-top-right-radius: 10px;"
+          >
+            <h5
+              class="card-title text-center mt-3"
+              style="max-width: 500px;"
+            >{{this.Namepokemon}}</h5>
+
+            <img
+              src="{{this.UrlImg}}"
+              class="card-img-top img-fluid"
+              style="height: 320px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;"
+              alt="Imagen"
+            />
+            <h6 class="text-center mt-3">{{this.Tipo}} | {{this.Region}}</h6>
+
+            <div class="card-body">
+              <div class="d-flex justify-content-center">
+
+                <form method="post" action="/deteteGenero" class="form-delete">
+                  <a
+                    href="/EditGeneros/{{this.id}}"
+                    class="btn btn-primary me-2"
+                  >
+                    Editar
+                  </a>
+                  <input type="hidden" value="{{this.id}}" name="GeneroId" />
+                  <button type="submit" class="btn btn-danger delete">
+                    Borrar
+                  </button>
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+
+  </div>
+{{else}}
+  <div class="">
+    <h1>No se encontraron pokemones.</h1>
+    <a href="/modPokemones" class="btn btn-success">+ Nuevo genero</a>
+
+  </div>
+{{/if}}
