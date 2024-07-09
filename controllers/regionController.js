@@ -21,4 +21,29 @@ exports.postModRegiones = (req, res, next) => {
   Region.save();
   res.redirect("/indexRegiones");
 };
+exports.postEliminarRegion = (req, res, next) => {
+  const RegiId = req.body.RegiId;
+  RegionModel.delete(RegiId);
+  res.redirect("/indexRegiones");
+};
 
+exports.getModEditRegiones = (req, res, next) => {
+  const RegiId = req.params.RegiId;
+  RegionModel.getByID(RegiId, (regi) => {
+    if (!regi) {
+      return res.redirect("/indexRegiones");
+    }
+    res.render("regiones/modRegiones", {
+      pageTitle: "Regiones | Modificad",
+      Region: regi,
+      EditMode: true,
+    });
+  });
+};
+exports.postEditRegion = (req, res, next) => {
+  const RegiId = req.body.RegiId;
+  const region = req.body.Title;
+  const Region = new RegionModel(RegiId, region);
+  Region.save();
+  res.redirect("/indexRegiones");
+};

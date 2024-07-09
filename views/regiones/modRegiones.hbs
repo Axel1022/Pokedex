@@ -4,11 +4,14 @@
       Formulario de Regiones
     </div>
     <div class="card-body">
-      <form method="POST" action="/{{#if EditMode}}SeriesEdit{{else}}addRegiones{{/if}}">
+      <form method="POST" action="/{{#if EditMode}}EditarRegion{{else}}addRegiones{{/if}}">
         <div class="form-group">
           <label for="title" class="form-label">Nombre:</label>
-          <input type="text" {{#if EditMode}} value="{{Serie.name}}" {{/if}} class="form-control" id="title" name="Title" required/>
+          <input type="text" {{#if EditMode}} value="{{Region.region}}" {{/if}} class="form-control" id="title" name="Title" required/>
         </div>
+        {{#if EditMode}}
+           <input type="hidden" value="{{Region.id}}" name="RegiId">
+          {{/if}}
         <div>
           <button type="submit" class="btn btn-primary mt-3 float-end">Enviar</button>
           <a href="/indexRegiones" class="btn btn-warning mt-3 float-end me-3">Cancelar</a>

@@ -27,20 +27,19 @@
             <div class="card-body">
               <div class="d-flex justify-content-center">
 
-                <form method="post" action="/deteteGenero" class="form-delete">
+                <form method="post" action="/eliminarPokemon" class="form-delete">
                   <a
-                    href="/EditGeneros/{{this.id}}"
+                    href="/EditarPokemon/{{this.id}}"
                     class="btn btn-primary me-2"
                   >
                     Editar
                   </a>
-                  <input type="hidden" value="{{this.id}}" name="GeneroId" />
+                  <input type="hidden" value="{{this.id}}" name="PokeId" />
                   <button type="submit" class="btn btn-danger delete">
                     Borrar
                   </button>
                 </form>
               </div>
-
             </div>
           </div>
         </div>
@@ -48,6 +47,7 @@
     </div>
 
   </div>
+
 {{else}}
   <div class="">
     <h1>No se encontraron pokemones.</h1>

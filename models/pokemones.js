@@ -32,16 +32,16 @@ module.exports = class pokemon {
   static getAll(cb) {
     jsonFileHandler.ReadAllData(dataPath, cb);
   }
-  //   static getByID(id, cb) {
-  //     jsonFileHandler.ReadAllData(dataPath, function (pokemones) {
-  //       const pokemon = pokemones.find((r) => r.id === id);
-  //       cb(pokemon);
-  //     });
-  //   }
-  //   static delete(id) {
-  //     jsonFileHandler.ReadAllData(dataPath, function (pokemones) {
-  //       const NewListpokemones = pokemones.filter((g) => g.id !== id);
-  //       jsonFileHandler.WriteData(dataPath, NewListpokemones);
-  //     });
-  //   }
+  static getByID(id, cb) {
+    jsonFileHandler.ReadAllData(dataPath, function (pokemones) {
+      const pokemon = pokemones.find((r) => r.id === id);
+      cb(pokemon);
+    });
+  }
+  static delete(id) {
+    jsonFileHandler.ReadAllData(dataPath, function (pokemones) {
+      const NewListpokemones = pokemones.filter((p) => p.id !== id);
+      jsonFileHandler.WriteData(dataPath, NewListpokemones);
+    });
+  }
 };

@@ -4,39 +4,46 @@
       Formulario de Pokemones
     </div>
     <div class="card-body">
-      <form method="POST" action="/{{#if EditMode}}SeriesEdit{{else}}addPokemones{{/if}}">
+      <form method="POST" action="/{{#if EditMode}}EditarPokemon{{else}}addPokemones{{/if}}">
         <div class="form-group">
           <label for="title" class="form-label">Nombre:</label>
-          <input type="text" {{#if EditMode}} value="{{Serie.name}}" {{/if}} class="form-control" id="title" name="Title" required/>
+          <input type="text" {{#if EditMode}} value="{{Pokemon.Namepokemon}}" {{/if}} class="form-control" id="title" name="Title" required/>
         </div>
         <div class="form-group">
           <label for="imgurl" class="form-label">Url Img:</label>
-          <input type="text" {{#if EditMode}} value="{{Serie.imgUrl}}" {{/if}} class="form-control" id="imgurl" name="ImgUrl" required />
+          <input type="text" {{#if EditMode}} value="{{Pokemon.UrlImg}}" {{/if}} class="form-control" id="imgurl" name="ImgUrl" required />
         </div>
 
         <div class="form-group">
           <label for="tipo" class="form-label">Tipo:</label>
           <select name="Tipo" id="tipo" class="form-control" required>
-            <option value="">Selecciona un tipo</option>
+
             {{#if EditMode}}
-              <option selected value="{{Pokemones.tipo}}">
-                {{Pokemones.tipo}}
-              </option>
+              <option selected value="{{Pokemon.Tipo}}">{{Pokemon.Tipo}}</option>
+              {{else}}
+              <option value="">Selecciona un tipo</option>
             {{/if}}
+
             {{#each Tipos}}
             <option value="{{this.tipo}}">{{this.tipo}}</option>
             {{/each}}
+
           </select>
           {{#if EditMode}}
-           <input type="hidden" value="{{Pokemones.id}}" name="id">
+           <input type="hidden" value="{{Pokemon.id}}" name="PokeId">
           {{/if}}
         </div>
 
         <div class="form-group">
           <label for="region" class="form-label">Región:</label>
           <select name="Region" id="regiion" class="form-control" required>
+            {{#if EditMode}}
+            <option selected value="{{Pokemon.Region}}">
+              {{Pokemon.Region}}
+              </option>
+              {{else}}
             <option value="">Selecciona una región</option>
-            {{#if EditMode}} <option selected value="{{Pokemon.genero}}">{{Pokemon.genero}}</option> {{/if}}
+              {{/if}}
             {{#each Regiones}}
             <option value="{{this.region}}">{{this.region}}</option>
             {{/each}}

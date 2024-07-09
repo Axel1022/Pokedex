@@ -17,22 +17,20 @@
             </h5>
             <div class="card-body">
               <div class="d-flex justify-content-center">
-                <form method="post" action="/deteteGenero" class="form-delete">
+                <form method="post" action="/EliminarTipos" class="form-delete">
                   <a
-                    href="/EditGeneros/{{this.id}}"
+                    href="/EditarTipo/{{this.id}}"
                     class="btn btn-primary me-2"
                   >
                     Editar
                   </a>
-                  <input type="hidden" value="{{this.id}}" name="GeneroId" />
+                  <input type="hidden" value="{{this.id}}" name="TipoId" />
                   <button type="submit" class="btn btn-danger delete">
                     Borrar
                   </button>
                 </form>
               </div>
-
             </div>
-
           </div>
         </div>
       {{/each}}

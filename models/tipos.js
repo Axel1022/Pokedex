@@ -29,16 +29,16 @@ module.exports = class region {
   static getAll(cb) {
     jsonFileHandler.ReadAllData(dataPath, cb);
   }
-  //   static getByID(id, cb) {
-  //     jsonFileHandler.ReadAllData(dataPath, function (tipo) {
-  //       const region = tipo.find((r) => r.id === id);
-  //       cb(region);
-  //     });
-  //   }
-  //   static delete(id) {
-  //     jsonFileHandler.ReadAllData(dataPath, function (tipo) {
-  //       const NewListtipo = tipo.filter((g) => g.id !== id);
-  //       jsonFileHandler.WriteData(dataPath, NewListtipo);
-  //     });
-  //   }
+  static getByID(id, cb) {
+    jsonFileHandler.ReadAllData(dataPath, function (tipo) {
+      const region = tipo.find((r) => r.id === id);
+      cb(region);
+    });
+  }
+  static delete(id) {
+    jsonFileHandler.ReadAllData(dataPath, function (tipo) {
+      const NewListtipo = tipo.filter((t) => t.id !== id);
+      jsonFileHandler.WriteData(dataPath, NewListtipo);
+    });
+  }
 };

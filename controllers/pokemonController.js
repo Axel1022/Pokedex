@@ -32,3 +32,32 @@ exports.postModPokemon = (req, res, next) => {
   Poke.save();
   res.redirect("/indexPokemones");
 };
+exports.postEliminarPokemon = (req, res, next) => {
+  const PokeId = req.body.PokeId;
+  PokemonModel.delete(PokeId);
+  res.redirect("/indexPokemones");
+};
+exports.getModEditPokemones = (req, res, next) => {
+  const PokeId = req.params.PokeId;
+  console.log(PokeId);
+  PokemonModel.getByID(PokeId, (poke) => {
+    if (!poke) {
+      return res.redirect("/indexPokemones");
+    }
+    res.render("pokemones/modPokemones", {
+      pageTitle: `Pokemones | ${poke.Namepokemon}`,
+      Pokemon: poke,
+      EditMode: true,
+    });
+  });
+};
+exports.postEditPokemon = (req, res, next) => {
+  const PokeId = req.body.PokeId;
+  const nombre = req.body.Title;
+  const Url = req.body.ImgUrl;
+  const tipo = req.body.Tipo;
+  const region = req.body.Region;
+  const Poke = new PokemonModel(PokeId, nombre, Url, tipo, region);
+  Poke.save();
+  res.redirect("/indexPokemones");
+};
