@@ -39,7 +39,6 @@ exports.postEliminarPokemon = (req, res, next) => {
 };
 exports.getModEditPokemones = (req, res, next) => {
   const PokeId = req.params.PokeId;
-  console.log(PokeId);
   PokemonModel.getByID(PokeId, (poke) => {
     if (!poke) {
       return res.redirect("/indexPokemones");

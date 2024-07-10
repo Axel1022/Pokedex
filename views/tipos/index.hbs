@@ -17,7 +17,12 @@
             </h5>
             <div class="card-body">
               <div class="d-flex justify-content-center">
-                <form method="post" action="/EliminarTipos" class="form-delete">
+                <form
+                  method="post"
+                  action="/EliminarTipos"
+                  class="form-delete"
+                  onsubmit="return confirm('¿Estás seguro de que deseas eliminar este tipo?');"
+                >
                   <a
                     href="/EditarTipo/{{this.id}}"
                     class="btn btn-primary me-2"
@@ -30,6 +35,7 @@
                   </button>
                 </form>
               </div>
+
             </div>
           </div>
         </div>
@@ -38,9 +44,10 @@
 
   </div>
 {{else}}
-  <div class="">
-    <h1>No se encontraron Tipos.</h1>
-    <a href="/modTipos" class="btn btn-success">+ Nuevo genero</a>
-
+  <div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="text-center">
+      <h1>No se encontraron Tipos.</h1>
+      <a href="/modTipos" class="btn btn-success mt-3">+ Nuevo Tipo</a>
+    </div>
   </div>
 {{/if}}

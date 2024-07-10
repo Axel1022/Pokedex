@@ -26,8 +26,12 @@
 
             <div class="card-body">
               <div class="d-flex justify-content-center">
-
-                <form method="post" action="/eliminarPokemon" class="form-delete">
+                <form
+                  method="post"
+                  action="/eliminarPokemon"
+                  class="form-delete"
+                  onsubmit="return confirm('¿Estás seguro de que deseas eliminar este Pokémon?');"
+                >
                   <a
                     href="/EditarPokemon/{{this.id}}"
                     class="btn btn-primary me-2"
@@ -49,9 +53,11 @@
   </div>
 
 {{else}}
-  <div class="">
-    <h1>No se encontraron pokemones.</h1>
-    <a href="/modPokemones" class="btn btn-success">+ Nuevo genero</a>
-
+  <div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="text-center">
+      <h1>No se encontraron pokemones.</h1>
+      <a href="/modPokemones" class="btn btn-success mt-3">+ Nuevo Pokemon</a>
+    </div>
   </div>
+
 {{/if}}

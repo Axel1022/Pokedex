@@ -27,6 +27,7 @@ exports.postEliminarTipo = (req, res, next) => {
   TipoModel.delete(TipoId);
   res.redirect("/indexTipos");
 };
+
 exports.getModEditTipos = (req, res, next) => {
   const TipoId = req.params.TipoId;
   TipoModel.getByID(TipoId, (tipo) => {

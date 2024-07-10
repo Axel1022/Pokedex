@@ -1,80 +1,70 @@
+<!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{pageTitle}}</title>
-    <link rel="stylesheet" href="/bootstrap/bootstrap.min.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{pageTitle}}</title>
+  <link rel="stylesheet" href="/bootstrap/bootstrap.min.css" />
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+    }
+  </style>
+</head>
 
-  <body>
-    <div>
-      <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-info  mb-4">
-          <a class="navbar-brand m-2" href="/">
-            <img
-              src="/assets/img/Pokemon01-25-years.png"
-              width="57"
-              height="50"
-              alt="Online Cinema Logo"
-            />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="/">Home
-                  <span class="sr-only"></span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/indexPokemones">Pokemones</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/indexRegiones">Regiones</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/indexTipos">Tipos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#">GC🌴</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-      <main>
-
-        <div class="m-2">
-          {{{body}}}
-
+<body>
+  <div class="d-flex flex-column h-100">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-info mb-4">
+        <a class="navbar-brand m-2" href="/">
+          <img src="/assets/img/Pokemon01-25-years.png" width="57" height="50" alt="Online Cinema Logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/indexPokemones">Pokemones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/indexRegiones">Regiones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/indexTipos">Tipos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">GC🌴</a>
+            </li>
+          </ul>
         </div>
-      </main>
-
-      <footer class="py-3 mt-4">
-        <div class="container">
-          <p class="text-center mb-0">&copy; 2024 Gary Campusano. Todos los
-            derechos reservados.</p>
-        </div>
-      </footer>
-    </div>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="/js/bootstrap/bootstrap.min.js"></script>
-    <script src="/utils/eliminar.js"></script>
-  </body>
+      </nav>
+    </header>
+    <main class="flex-fill">
+      <div class="m-2">
+        {{{body}}}
+      </div>
+    </main>
+    <footer class="py-3 mt-4 bg-light">
+      <div class="container">
+        <p class="text-center mb-0">&copy; 2024 Gary Campusano🌴. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/js/bootstrap/bootstrap.min.js"></script>
+  <script src="/utils/eliminar.js"></script>
+</body>
 
 </html>
