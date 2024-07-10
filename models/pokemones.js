@@ -44,4 +44,7 @@ module.exports = class pokemon {
       jsonFileHandler.WriteData(dataPath, NewListpokemones);
     });
   }
+  static buscar(info, cb) {
+    jsonFileHandler.BuscarNombre(dataPath, info, cb);
+  }
 };

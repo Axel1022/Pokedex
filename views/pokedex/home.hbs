@@ -5,7 +5,23 @@
         <h1 class="me-3">Lista de Pokemones</h1>
         <form
           method="post"
-          action="/buscarPokemon"
+          action="/BuscarPokemon"
+          class="d-flex align-items-center"
+        >
+          <div class="form-group me-3">
+            <select class="form-control" id="info" name="info">
+              <option value="">Lista de regiones</option>
+              {{#each Regiones}}
+                <option value="{{this.region}}">{{this.region}}</option>
+              {{/each}}
+
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Filtrar</button>
+        </form>
+        <form
+          method="post"
+          action="/BuscarPokemon"
           class="d-flex align-items-center"
         >
           <div class="form-group me-3">

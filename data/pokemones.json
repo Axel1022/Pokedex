@@ -1,1 +1,58 @@
-[{"id":"142","Namepokemon":"squirtle","UrlImg":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/007.png","Tipo":"Agua","Region":"Kanto"},{"id":"004","Namepokemon":"charmander","UrlImg":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/004.png","Tipo":"Fuego","Region":"Kanto"},{"id":"001","Namepokemon":"bulbasaur","UrlImg":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/001.png","Tipo":"Planta/Veneno","Region":"Kanto"},{"id":"025","Namepokemon":"pikachu","UrlImg":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/025.png","Tipo":"Eléctrico","Region":"Kanto"},{"id":"039","Namepokemon":"jigglypuff","UrlImg":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/039.png","Tipo":"Normal/Hada","Region":"Kanto"},{"id":"0.15913888145454624","Namepokemon":"Pidgeot","UrlImg":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/018_f2.png","Tipo":"Normal/Volador","Region":"Kanto"},{"id":"0.12282484811477756","Namepokemon":"Hoothoot","UrlImg":"https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d3/latest/20230627205917/Hoothoot.png/800px-Hoothoot.png","Tipo":"Normal/Volador","Region":"Johto"},{"id":"0.05835157561928028","Namepokemon":"Taillow","UrlImg":"https://static.pokemonpets.com/images/monsters-images-800-800/276-Taillow.png","Tipo":"Normal/Volador","Region":"Hoenn"}]
+[
+  {
+    "id": "142",
+    "Namepokemon": "squirtle",
+    "UrlImg": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/007.png",
+    "Tipo": "Agua",
+    "Region": "Kanto"
+  },
+  {
+    "id": "004",
+    "Namepokemon": "charmander",
+    "UrlImg": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/004.png",
+    "Tipo": "Fuego",
+    "Region": "Kanto"
+  },
+  {
+    "id": "001",
+    "Namepokemon": "bulbasaur",
+    "UrlImg": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/001.png",
+    "Tipo": "Planta/Veneno",
+    "Region": "Kanto"
+  },
+  {
+    "id": "025",
+    "Namepokemon": "pikachu",
+    "UrlImg": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/025.png",
+    "Tipo": "Eléctrico",
+    "Region": "Kanto"
+  },
+  {
+    "id": "039",
+    "Namepokemon": "jigglypuff",
+    "UrlImg": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/039.png",
+    "Tipo": "Normal/Hada",
+    "Region": "Kanto"
+  },
+  {
+    "id": "0.15913888145454624",
+    "Namepokemon": "Pidgeot",
+    "UrlImg": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/018_f2.png",
+    "Tipo": "Normal/Volador",
+    "Region": "Kanto"
+  },
+  {
+    "id": "0.12282484811477756",
+    "Namepokemon": "Hoothoot",
+    "UrlImg": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d3/latest/20230627205917/Hoothoot.png/800px-Hoothoot.png",
+    "Tipo": "Normal/Volador",
+    "Region": "Johto"
+  },
+  {
+    "id": "0.05835157561928028",
+    "Namepokemon": "Taillow",
+    "UrlImg": "https://static.pokemonpets.com/images/monsters-images-800-800/276-Taillow.png",
+    "Tipo": "Normal/Volador",
+    "Region": "Hoenn"
+  }
+]

@@ -47,3 +47,4 @@ exports.postEditRegion = (req, res, next) => {
   Region.save();
   res.redirect("/indexRegiones");
 };
+
